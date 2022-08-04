@@ -1,18 +1,21 @@
 import React from "react";
 import logo from "../../Images/logosmall.png"
+import "./NavBar.css" 
+import Cartwidget from "../CartWidget"
 
 export const NavBar = () => {
     return ( 
-        <div>
+        <nav className="App-nav"iv>
             <img src={logo} alt="" />
-            <ul>
-                <li><a href="">COLECCIÓN</a></li>
-                <li><a href="">STORE</a></li>
-                <li><a href="">BOUTIQUE</a></li>
-                <li><a href="">CONTACTO</a></li>
+            <ul className="App-items">
+                <li className="link">COLECCIÓN</li>
+                <li className="link">STORE</li>
+                <li className="link">BOUTIQUE</li>
+                <li className="link">CONTACTO</li>
+                <Cartwidget/>
             </ul>
         
-        </div>
+        </nav>
      );
 }
  

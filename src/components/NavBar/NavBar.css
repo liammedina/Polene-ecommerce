@@ -1,0 +1,30 @@
+.App-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 97vw; 
+    font-family: 'Lexend Tera';
+    color: #5b5c5e;
+    
+  }
+  .parrafo {
+    font-size: 25px ;
+    font-family: 'Lexend Tera';
+    margin: 0 20px 0 0 ;
+  }
+  .App-items {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+    margin: 0 5px 0 5ps;
+    list-style: none;
+  }
+  .App-nav a{
+    list-style: none;
+  }
+  .link{
+    cursor: pointer;
+  }
