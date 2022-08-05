@@ -5,7 +5,7 @@ import Database from "../DataBase/DataBase";
 import ItemList from "../ItemList/ItemList";
 
 
-export const ItemListContainer = ({texto}) => {
+export const ItemListContainer = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export const ItemListContainer = ({texto}) => {
 
     return ( 
         <>
-            <Title greeting= {texto}/>
+            
             <ItemCount initial={1} stock={5} onAdd={onAdd}/>
             <ItemList data={data}/>
         </>

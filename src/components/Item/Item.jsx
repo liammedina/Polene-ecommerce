@@ -2,7 +2,7 @@ import "./Item.css";
 import React from "react";
 
 const Item = ({info}) => {
-    const {title, price, img, id}= Item;
+    
     return ( 
         <a href="" className="card" style={{width: "17rem"}}>
             <img className="card-img-top" src={info.img} alt="" />
