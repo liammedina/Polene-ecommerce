@@ -3,10 +3,13 @@ import Title from "../title"
 import ItemCount from "../ItemCount";
 import Database from "../DataBase/DataBase";
 import ItemList from "../ItemList/ItemList";
+import {useParams} from "react-router-dom";
 
 
 export const ItemListContainer = () => {
     const [data, setData] = useState([]);
+
+    const {detalleId} = useParams();
 
     useEffect(() => {
         const getData = new Promise(resolve => {
@@ -14,9 +17,13 @@ export const ItemListContainer = () => {
                 resolve(Database);
             }, 2000);
         });
-        getData.then(res => setData(res));
 
-    }, [])
+        if (detalleId) {
+        getData.then(res =>setData(res.filter(Database => Database.category === detalleId)))
+        } else {
+        getData.then(res => setData(res));
+        }
+    }, [detalleId])
 
 
    const onAdd = (quantity) =>{
